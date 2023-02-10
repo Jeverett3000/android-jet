@@ -39,7 +39,7 @@ for gemoji in gemojis:
 
     if emoji is not None and aliases is not None:
         for alias in filter(None, aliases):
-            cursor.execute("INSERT INTO gemoji VALUES ('%s', '%s')" % (alias, emoji))
+            cursor.execute(f"INSERT INTO gemoji VALUES ('{alias}', '{emoji}')")
 
 connection.commit()
 connection.close()
